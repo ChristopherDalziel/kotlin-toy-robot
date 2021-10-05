@@ -3,7 +3,6 @@ package to.dev.example
 import java.util.logging.Logger
 
 data class Robot(private val facing: Direction, private val position: Position) {
-
     private val logger = Logger.getLogger(java.awt.Robot::class.java.name)
 
     fun move(board: Board): Robot {

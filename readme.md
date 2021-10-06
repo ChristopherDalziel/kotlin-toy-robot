@@ -1,6 +1,8 @@
 <h1>Kotlin Toy Robot</h1>
 
-Commands read from CommandFile.txt path should be added Program Arguments in your config.
+Commands read from CommandFile.txt path should be added Program Arguments in your config <br />
+Eg:
+`${path}/kotlin-toy-robot/src/main/kotlin/to/dev/example/CommandFile.txt`
 
 <h4>Example commands</h4>
 - place 4,4,south <br /> places robot at a specific position on the board <br />

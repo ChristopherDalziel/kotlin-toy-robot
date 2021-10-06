@@ -20,7 +20,7 @@ fun main(args: Array<String>) = if (args.isNotEmpty()) {
             "MOVE" -> functionality.moveRobot()
             "RIGHT" -> functionality.right()
             "LEFT" -> functionality.left()
-            "REPORT" -> print(functionality.report())
+            "REPORT" -> println(functionality.report())
             else -> logger.info("Ignoring invalid command: $command")
         }
     }

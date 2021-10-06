@@ -1,4 +1,5 @@
 place 0,0,north
 right
 move
+move
 report

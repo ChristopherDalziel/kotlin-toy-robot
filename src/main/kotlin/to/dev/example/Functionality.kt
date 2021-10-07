@@ -9,8 +9,12 @@ class Functionality constructor(private val board: Board = Board()){
     fun report(): String? { return this.robot?.report() }
 
     fun moveRobot() {
-        logger.info("MOVING")
-        this.robot = this.robot?.move(board)
+        if (this.robot == null) {
+            logger.info("**Robot must be placed before it can move**")
+        } else {
+            logger.info("MOVING")
+            this.robot = this.robot?.move(board)
+        }
     }
 
     fun place(facing: Direction, position: Position) {
@@ -24,13 +28,21 @@ class Functionality constructor(private val board: Board = Board()){
     }
 
     fun right() {
-        logger.info("RIGHT TURN")
-        this.robot = this.robot?.right()
+        if (this.robot == null) {
+            logger.info("**Robot must be placed before it can turn**")
+        } else {
+            logger.info("RIGHT TURN")
+            this.robot = this.robot?.right()
+        }
     }
 
     fun left() {
-        logger.info("LEFT TURN")
-        this.robot = this.robot?.left()
+        if (this.robot == null) {
+            logger.info("**Robot must be placed before it can move**")
+        } else {
+            logger.info("LEFT TURN")
+            this.robot = this.robot?.left()
+        }
     }
 
 }

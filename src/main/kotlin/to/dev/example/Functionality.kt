@@ -38,7 +38,7 @@ class Functionality constructor(private val board: Board = Board()){
 
     fun left() {
         if (this.robot == null) {
-            logger.info("**Robot must be placed before it can move**")
+            logger.info("**Robot must be placed before it can turn**")
         } else {
             logger.info("LEFT TURN")
             this.robot = this.robot?.left()

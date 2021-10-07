@@ -14,8 +14,13 @@ class Functionality constructor(private val board: Board = Board()){
     }
 
     fun place(facing: Direction, position: Position) {
-        logger.info("**Placing Robot** $facing, $position")
-        this.robot = Robot(facing, position)
+        if(board.withinBoard(position)) {
+            logger.info("**Placing Robot** $facing, $position")
+            this.robot = Robot(facing, position)
+        } else {
+            logger.info("**Robot cannot be placed beyond ${board.maxHeight}, ${board.maxWidth} placing at default 0,0**")
+            this.robot = Robot(facing, Position(0,0))
+        }
     }
 
     fun right() {
@@ -29,3 +34,4 @@ class Functionality constructor(private val board: Board = Board()){
     }
 
 }
+

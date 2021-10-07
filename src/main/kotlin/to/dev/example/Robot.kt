@@ -21,19 +21,28 @@ data class Robot(private val facing: Direction, private val position: Position) 
         }
     }
 
-    fun right(): Robot = when (facing) {
-        Direction.NORTH -> Robot(Direction.EAST, position)
-        Direction.EAST -> Robot(Direction.SOUTH, position)
-        Direction.SOUTH -> Robot(Direction.WEST, position)
-        Direction.WEST -> Robot(Direction.NORTH, position)
+    fun right(): Robot {
+        return Robot(facing.right(), position)
     }
 
-    fun left(): Robot = when (facing) {
-        Direction.NORTH -> Robot(Direction.WEST, position)
-        Direction.EAST -> Robot(Direction.NORTH, position)
-        Direction.SOUTH -> Robot(Direction.EAST, position)
-        Direction.WEST -> Robot(Direction.SOUTH, position)
+    fun left(): Robot {
+        return Robot(facing.left(), position)
     }
+
+// Previous left/right functions
+//    fun right(): Robot = when (facing) {
+//        Direction.NORTH -> Robot(Direction.EAST, position)
+//        Direction.EAST -> Robot(Direction.SOUTH, position)
+//        Direction.SOUTH -> Robot(Direction.WEST, position)
+//        Direction.WEST -> Robot(Direction.NORTH, position)
+//    }
+
+//    fun left(): Robot = when (facing) {
+//        Direction.NORTH -> Robot(Direction.WEST, position)
+//        Direction.EAST -> Robot(Direction.NORTH, position)
+//        Direction.SOUTH -> Robot(Direction.EAST, position)
+//        Direction.WEST -> Robot(Direction.SOUTH, position)
+//    }
 
     fun report(): String = "POSITION: $position, FACING: $facing"
 }

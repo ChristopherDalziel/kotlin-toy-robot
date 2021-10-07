@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="to.dev.example.RobotTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-10-07T08:58:29" hostname="ChristohersMBP2.modem" time="0.036">
+<testsuite name="to.dev.example.RobotTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-10-07T09:01:30" hostname="ChristohersMBP2.modem" time="0.046">
   <properties/>
-  <testcase name="Given the Robot is placed, when it Move command attempts to go beyond the board, the Robot is unable to move further()" classname="to.dev.example.RobotTest" time="0.031"/>
-  <testcase name="Given the Robot is placed, when the Right command is called, a valid location is returned showing the Robot is now facing one position right of NORTH()" classname="to.dev.example.RobotTest" time="0.001"/>
+  <testcase name="Given the Robot is placed, when it Move command attempts to go beyond the board, the Robot is unable to move further()" classname="to.dev.example.RobotTest" time="0.042"/>
+  <testcase name="Given the Robot is placed, when the Right command is called, a valid location is returned showing the Robot is now facing one position right of NORTH()" classname="to.dev.example.RobotTest" time="0.0"/>
   <testcase name="Given the Robot is placed, when the Move command is called, a valid location is returned showing the Robot has moved forward one space from it's previous position()" classname="to.dev.example.RobotTest" time="0.001"/>
   <testcase name="Given the Robot is placed, when the Left command is called, a valid location is returned showing the Robot is now facing one position left of NORTH()" classname="to.dev.example.RobotTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Oct. 07, 2021 7:58:29 PM to.dev.example.Robot move
+  <system-err><![CDATA[Oct. 07, 2021 8:01:30 PM to.dev.example.Robot move
 INFO: The Robot has reached the edge of the board ..stopping
 ]]></system-err>
 </testsuite>
